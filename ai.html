@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniVerse Pro — AI</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>UniVerse Pro</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="universities.html">Университеты</a></li>
+        <li><a href="dorms.html">Общежития</a></li>
+        <li><a href="ai.html" class="active">AI</a></li>
+        <li><a href="about.html">О нас</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="auth.html" class="btn ghost">Войти</a>
+      </div>
+      <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Главная</a>
+      <a href="universities.html">Университеты</a>
+      <a href="dorms.html">Общежития</a>
+      <a href="ai.html">AI</a>
+      <a href="about.html">О нас</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section growth-section" id="growth">
+      <div class="section-title">
+        <span>Growth Lab</span>
+        <h2>Инструменты для поступления</h2>
+        <p>Калькулятор GPA, подбор стипендий и оценка шансов поступления.</p>
+      </div>
+      <div class="growth-layout">
+        <div class="growth-card">
+          <div class="growth-icon">
+            <i class="fa-solid fa-calculator"></i>
+          </div>
+          <h3>GPA Calculator</h3>
+          <p>Посчитай средний балл по предметам.</p>
+          <div class="gpa-inputs">
+            <input type="number" class="grade-input" placeholder="Оценка 1" min="0" max="4" step="0.1">
+            <input type="number" class="grade-input" placeholder="Оценка 2" min="0" max="4" step="0.1">
+            <input type="number" class="grade-input" placeholder="Оценка 3" min="0" max="4" step="0.1">
+            <input type="number" class="grade-input" placeholder="Оценка 4" min="0" max="4" step="0.1">
+          </div>
+          <button class="btn primary" id="calculateGpaBtn">Рассчитать GPA</button>
+          <div class="growth-result" id="gpaResult">GPA появится здесь.</div>
+        </div>
+        <div class="growth-card">
+          <div class="growth-icon">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3>Scholarship Finder</h3>
+          <p>Подбор возможных стипендий по GPA и IELTS.</p>
+          <input type="number" id="scholarshipGpa" placeholder="Ваш GPA" min="0" max="4" step="0.1">
+          <input type="number" id="scholarshipIelts" placeholder="IELTS" min="0" max="9" step="0.5">
+          <button class="btn primary" id="findScholarshipBtn">Найти стипендии</button>
+          <div class="growth-result" id="scholarshipResult">Результат появится здесь.</div>
+        </div>
+        <div class="growth-card">
+          <div class="growth-icon">
+            <i class="fa-solid fa-chart-simple"></i>
+          </div>
+          <h3>Admission Chance</h3>
+          <p>Оценка вероятности поступления.</p>
+          <input type="number" id="chanceGpa" placeholder="Ваш GPA" min="0" max="4" step="0.1">
+          <input type="number" id="chanceIelts" placeholder="IELTS" min="0" max="9" step="0.5">
+          <select id="chanceLevel">
+            <option value="easy">Обычный университет</option>
+            <option value="medium">Сильный университет</option>
+            <option value="hard">Топовый университет</option>
+          </select>
+          <button class="btn primary" id="calculateChanceBtn">Оценить шанс</button>
+          <div class="growth-result" id="chanceResult">Шанс поступления появится здесь.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section roadmap-section" id="roadmap">
+      <div class="section-title">
+        <span>Admission Roadmap</span>
+        <h2>Путь поступления</h2>
+        <p>Сайт показывает, что нужно сделать до подачи в университет.</p>
+      </div>
+      <div class="roadmap-layout">
+        <div class="roadmap-form">
+          <h3>Настрой свой путь</h3>
+          <label>Выбери университет</label>
+          <select id="roadmapUniversity"></select>
+          <label>Твой текущий уровень</label>
+          <select id="roadmapLevel">
+            <option value="school">Школьник</option>
+            <option value="college">Колледж</option>
+            <option value="bachelor">Бакалавр</option>
+          </select>
+          <label>Твой IELTS</label>
+          <input type="number" id="roadmapIelts" placeholder="Например: 6.0" min="0" max="9" step="0.5">
+          <label>Твой GPA</label>
+          <input type="number" id="roadmapGpa" placeholder="Например: 3.4" min="0" max="4" step="0.1">
+          <button class="btn primary" id="buildRoadmapBtn">Построить roadmap</button>
+        </div>
+        <div class="roadmap-result">
+          <h3>Твой план поступления</h3>
+          <div id="roadmapResult">
+            <p class="empty-roadmap">Заполни форму. Roadmap появится здесь.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>UniVerse Pro</h3>
+        <p>Smart platform for university search, dormitories and admission planning.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <a href="universities.html">University Search</a>
+        <a href="auth.html">Profile</a>
+        <a href="dorms.html">Dormitories</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About us</a>
+        <a href="index.html">Home</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>universepro@startup.com</p>
+        <p>Astana, Kazakhstan</p>
+      </div>
+    </div>
+    <div class="footer-bottom">©️ 2026 UniVerse Pro. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

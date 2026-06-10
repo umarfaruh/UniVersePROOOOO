@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniVerse Pro — Общежития</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>UniVerse Pro</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="universities.html">Университеты</a></li>
+        <li><a href="dorms.html" class="active">Общежития</a></li>
+        <li><a href="ai.html">AI</a></li>
+        <li><a href="about.html">О нас</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="auth.html" class="btn ghost">Войти</a>
+      </div>
+      <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Главная</a>
+      <a href="universities.html">Университеты</a>
+      <a href="dorms.html">Общежития</a>
+      <a href="ai.html">AI</a>
+      <a href="about.html">О нас</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section dorms-section" id="dorms">
+      <div class="section-title">
+        <span>Dormitories</span>
+        <h2>Поиск общежитий</h2>
+        <p>Сравнивай жильё по цене, расстоянию, условиям и рейтингу.</p>
+      </div>
+      <div class="dorm-search-layout">
+        <aside class="dorm-filters">
+          <h3>Фильтры</h3>
+          <label>Поиск</label>
+          <input type="text" id="dormSearchInput" placeholder="Campus Dorm..." />
+          <label>Максимальная цена</label>
+          <select id="dormPriceFilter">
+            <option value="all">Любая цена</option>
+            <option value="300">До $300</option>
+            <option value="400">До $400</option>
+            <option value="500">До $500</option>
+          </select>
+          <label>Расстояние до кампуса</label>
+          <select id="dormDistanceFilter">
+            <option value="all">Любое расстояние</option>
+            <option value="5">До 5 минут</option>
+            <option value="10">До 10 минут</option>
+            <option value="20">До 20 минут</option>
+          </select>
+          <label>Удобства</label>
+          <select id="dormFeatureFilter">
+            <option value="all">Любые удобства</option>
+            <option value="Wi-Fi">Wi-Fi</option>
+            <option value="Kitchen">Кухня</option>
+            <option value="Laundry">Прачечная</option>
+            <option value="Gym">Спортзал</option>
+          </select>
+          <button class="btn primary" id="resetDormFilters">Сбросить</button>
+        </aside>
+        <div class="dorms-area">
+          <div class="result-top">
+            <h3>Доступные общежития</h3>
+            <p id="dormResultCount">Найдено: 0</p>
+          </div>
+          <div class="dorms-grid" id="dormsGrid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>UniVerse Pro</h3>
+        <p>Smart platform for university search, dormitories and admission planning.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <a href="universities.html">University Search</a>
+        <a href="ai.html">AI Advisor</a>
+        <a href="auth.html">Profile</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About us</a>
+        <a href="index.html">Home</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>universepro@startup.com</p>
+        <p>Astana, Kazakhstan</p>
+      </div>
+    </div>
+    <div class="footer-bottom">©️ 2026 UniVerse Pro. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

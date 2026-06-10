@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniVerse Pro — Профиль</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>UniVerse Pro</span>
+      </div>
+
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="universities.html">Университеты</a></li>
+        <li><a href="dorms.html">Общежития</a></li>
+        <li><a href="ai.html">AI</a></li>
+        <li><a href="about.html">О нас</a></li>
+      </ul>
+
+      <div class="nav-buttons">
+        <a href="index.html" class="btn ghost">Главная</a>
+      </div>
+
+      <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Главная</a>
+      <a href="universities.html">Университеты</a>
+      <a href="dorms.html">Общежития</a>
+      <a href="ai.html">AI</a>
+      <a href="about.html">О нас</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section profile-section" id="profile">
+      <div class="section-title">
+        <span>Profile</span>
+        <h2>Вход через Google и избранное</h2>
+        <p>Войдите через Google, чтобы сохранять университеты и общежития в избранное.</p>
+      </div>
+
+      <div class="profile-layout">
+        <div class="auth-box" id="authBox">
+          <h3>Войти через Google</h3>
+          
+          <div class="g-recaptcha"
+          data-sitekey="6LctHRMtAAAAAI6pdcnPyfesbNSrQQKAHHzkqmTd/6LctHRMtAAAAABsokq7MC3E3J3qHPsiglY2igooZ">
+          <button class="btn google" id="googleLoginBtn">
+            <i class="fa-brands fa-google"></i>
+            Войти через Google
+          </button>
+          <p class="auth-note">
+            Нажмите кнопку, чтобы использовать безопасную авторизацию через Firebase.
+          </p>
+        </div>
+
+        <div class="dashboard-box" id="dashboardBox">
+          <div class="dashboard-header">
+            <div>
+              <h3>Добро пожаловать, <span id="profileName">Student</span></h3>
+              <p id="profileEmail">student@mail.com</p>
+            </div>
+            <button class="btn secondary" id="logoutBtn">Выйти</button>
+          </div>
+
+          <div class="dashboard-stats">
+            <div>
+              <h4 id="savedCount">0</h4>
+              <p>Избранных</p>
+            </div>
+            <div>
+              <h4 id="compareCount">0</h4>
+              <p>В сравнении</p>
+            </div>
+            <div>
+              <h4>AI</h4>
+              <p>Advisor</p>
+            </div>
+          </div>
+
+          <div class="tabs">
+            <button class="tab-btn active" id="favUniversitiesTab">Университеты</button>
+            <button class="tab-btn" id="favDormsTab">Общежития</button>
+          </div>
+
+          <div class="saved-grid" id="savedGrid">
+            <div id="favoriteUniversities" class="favorite-section"></div>
+            <div id="favoriteDorms" class="favorite-section" style="display: none"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>UniVerse Pro</h3>
+        <p>Smart platform for university search, dormitories and admission planning.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <a href="universities.html">University Search</a>
+        <a href="ai.html">AI Advisor</a>
+        <a href="dorms.html">Dormitories</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About us</a>
+        <a href="auth.html">Profile</a>
+        <a href="index.html">Home</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>universepro@startup.com</p>
+        <p>Astana, Kazakhstan</p>
+      </div>
+    </div>
+    <div class="footer-bottom">©️ 2026 UniVerse Pro. All rights reserved.</div>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

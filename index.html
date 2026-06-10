@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniVerse Pro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>UniVerse Pro</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Главная</a></li>
+        <li><a href="universities.html">Университеты</a></li>
+        <li><a href="dorms.html">Общежития</a></li>
+        <li><a href="ai.html">AI</a></li>
+        <li><a href="about.html">О нас</a></li>
+      </ul>
+
+      <div class="nav-buttons">
+        <a href="auth.html" class="btn ghost">Войти</a>
+        <a href="auth.html" class="btn primary">Регистрация</a>
+      </div>
+
+      <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Главная</a>
+      <a href="universities.html">Университеты</a>
+      <a href="dorms.html">Общежития</a>
+      <a href="ai.html">AI</a>
+      <a href="about.html">О нас</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="badge">
+          <i class="fa-solid fa-sparkles"></i>
+          Smart University Finder
+        </div>
+        <h1>Найди университет, который подходит именно тебе</h1>
+        <p>UniVerse Pro помогает выбрать университет, сравнить стоимость, общежития и получить персональные рекомендации.</p>
+        <div class="hero-actions">
+          <a href="universities.html" class="btn large primary">Начать поиск</a>
+          <a href="ai.html" class="btn large glass">AI Подбор</a>
+        </div>
+        <div class="stats">
+          <div>
+            <h3>5000+</h3>
+            <span>университетов</span>
+          </div>
+          <div>
+            <h3>80+</h3>
+            <span>стран</span>
+          </div>
+          <div>
+            <h3>24/7</h3>
+            <span>доступ</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="card-top">
+          <span>AI Recommendation</span>
+          <i class="fa-solid fa-brain"></i>
+        </div>
+        <h2>University of Toronto</h2>
+        <p>Canada · Computer Science</p>
+        <div class="match">
+          <span>Совпадение</span>
+          <strong>94%</strong>
+        </div>
+        <div class="progress">
+          <div></div>
+        </div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Есть общежитие</li>
+          <li><i class="fa-solid fa-check"></i> Возможна стипендия</li>
+          <li><i class="fa-solid fa-check"></i> Высокий рейтинг</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section features-preview">
+      <div class="section-title">
+        <span>Почему UniVerse</span>
+        <h2>Работай с отдельными разделами</h2>
+        <p>Университеты, общежития, AI-инструменты и профиль теперь доступны на отдельных страницах.</p>
+      </div>
+      <div class="features">
+        <div class="feature-card">
+          <i class="fa-solid fa-school"></i>
+          <h3>Университеты</h3>
+          <p>Поиск, фильтрация и сравнение лучших вузов мира.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-house"></i>
+          <h3>Общежития</h3>
+          <p>Подбери комфортное жильё рядом с кампусом.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-robot"></i>
+          <h3>AI-помощник</h3>
+          <p>Оценка шансов поступления, roadmap и выбор стипендии.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-preview">
+      <div class="section-title">
+        <span>О нас</span>
+        <h2>UniVerse Pro делает выбор университета проще</h2>
+        <p>Мы помогаем оптимизировать процесс поступления и подобрать лучший университет по бюджету, рейтингу и локации.</p>
+      </div>
+      <div class="about-card">
+        <h3>Начни сейчас</h3>
+        <p>Перейди на страницу профиля, чтобы зарегистрироваться, или открой AI-инструменты для персональных рекомендаций.</p>
+        <a href="auth.html" class="btn primary">Перейти к профилю</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>UniVerse Pro</h3>
+        <p>Smart platform for university search, dormitories and admission planning.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <a href="universities.html">University Search</a>
+        <a href="ai.html">AI Advisor</a>
+        <a href="dorms.html">Dormitories</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About us</a>
+        <a href="auth.html">Profile</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>universepro@startup.com</p>
+        <p>Astana, Kazakhstan</p>
+      </div>
+    </div>
+    <div class="footer-bottom">©️ 2026 UniVerse Pro. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
